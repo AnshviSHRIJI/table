@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+<div class="top-bar">
+    <h1>My Shop</h1>
+    <p>Fresh arrivals every week</p>
+</div>
+
+<!-- product cards -->
+<div class="products">
+
+    <div class="box">
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/680/1020/image/4a646384c7654bc0.jpg?q=60" alt="perfume">
+        <div class="info">
+            <h2>Night Bloom Perfume</h2>
+            <p>A warm floral scent that lasts all day. Perfect for evenings out.</p>
+            <strong>Rs. 849</strong>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shampoo/e/h/d/-original-imahg3g2va8gkcz7.jpeg?q=70" alt="tresemme shampoo">
+        <div class="info">
+            <h2>Tresemme Shampoo</h2>
+            <p>L'Oréal Paris Total Repair 5 Shampoo | Pro-Keratin & Ceramide For Damaged and Weak Hair (1 L)</p>
+            <strong>Rs. 899</strong>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="https://rukminim2.flixcart.com/image/1600/2140/xif0q/television/7/i/b/-original-imahg4z3qgd6fhpb.jpeg?q=60" alt="realme smart tv">
+        <div class="info">
+            <h2>Realme Smart TV</h2>
+            <p>realme TechLife 164 cm (65 inch) QLED Ultra HD (4K) Smart Google TV (65UHDGQRDDVQ)</p>
+            <strong>Rs. 45,999</strong>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/precious-pendant-locket/h/s/o/na-0-01-5-sj7p8-a-p-femme-jam-8-original-imagqfv3uvqtsuyj.jpeg?q=70" alt="jewellary">
+        <div class="info">
+            <h2>Precious Jewellary</h2>
+            <p>Femme Jam 925 Sterling Silver Natural Amethyst Gemstone Titanic Necklace for Women & Girls Princess White Gold Precious Necklace</p>
+            <strong>Rs. 2690</strong>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="https://rukminim2.flixcart.com/image/1600/2140/xif0q/backpack/k/f/i/10-unisex-korean-style-laptop-backpack-stylish-casual-backpack-original-imahmaa6hgbbxmhy.jpeg?q=60" alt="backpack">
+        <div class="info">
+            <h2>Korean Backpack</h2>
+            <p>INTOUCH Large 40 L Laptop Backpack Unisex Korean Style Laptop Backpack Stylish Casual Backpack for Men And Women (Pink)</p>
+            <strong>Rs. 699</strong>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQl-y-3RIwJF8MqAAutAne6XaNzV6kbtgxYYBk_mTEFf6hzUrv5tAAtHuOYXERug3_8IvOYEiOFhEEG8PSKX_KutTrvzgUqA1SBF1fkoWQ" alt="speaker">
+        <div class="info">
+            <h2>Bass Bluetooth Speaker</h2>
+            <p>Compact speaker with deep bass. Waterproof and up to 8hrs battery.</p>
+            <strong>Rs. 1749</strong>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- shipping/returns/contact tabs -->
+<div class="shop-info">
+    <div class="tabs">
+        <button class="tab-btn active" data-tab="shipping">Shipping</button>
+        <button class="tab-btn" data-tab="returns">Returns</button>
+        <button class="tab-btn" data-tab="contact">Contact Us</button>
+    </div>
+
+    <div class="tab-content active" id="shipping">
+        <p>Orders are packed within 24 hours and shipped through our regular courier partners. Most cities receive their order in 3-5 working days, a little longer for remote areas.</p>
+    </div>
+
+    <div class="tab-content" id="returns">
+        <p>Not happy with what you got? You can return any item within 7 days of delivery as long as it's unused and in its original packaging. Refunds are processed once we receive the item back.</p>
+    </div>
+
+    <div class="tab-content" id="contact">
+        <p>Have a question about your order or a product? Reach us at support@myshop.com or call us at +91 98765 43210, Monday to Saturday, 10am to 7pm.</p>
+    </div>
+</div>
+
+<!-- feedback form with live char counter -->
+<div class="feedback-section">
+    <h2>Tell us what you think</h2>
+    <textarea id="feedbackBox" placeholder="Write your feedback here..."></textarea>
+    <p id="charCount">0 / 300 characters</p>
+    <button id="submitFeedback">Submit Feedback</button>
+    <p id="thanksMsg">Thanks for your feedback!</p>
+</div>
+
+<!-- back to top -->
+<button id="backToTop" aria-label="Back to top">↑</button>
+
+<script src="app.js"></script>
+</body>
+</html>
