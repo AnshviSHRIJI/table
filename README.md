@@ -1,4 +1,37 @@
-# day14-profile-card
+# Day 13 — JavaScript Interactivity
+
+Adding JavaScript interactions to the shop page built in Week 1.
+
+## What I built
+
+A product shop page with three JavaScript interactions added on top of the existing HTML and CSS.
+
+## Interactions
+
+- **Character counter** — Live count on the feedback textarea, turns red when over 300 characters
+- **Back to top button** — Appears after scrolling 200px, smooth scrolls back to the top on click
+- **Tab switcher** — Shipping, Returns, and Contact tabs, clicking each shows its panel and hides the others
+
+## Files
+
+| File | Purpose |
+|------|---------|
+| `products.html` | Shop page markup with product cards, tabs, feedback form |
+| `products.css` | All styles — dark theme with midnightblue and gold |
+| `app.js` | All three JavaScript interactions |
+
+## Rules I followed
+
+- All JavaScript is in `app.js` — no inline `onclick` anywhere in the HTML
+- Used `querySelector` and `addEventListener` throughout
+- Zero console errors
+
+## What I learned
+
+- How to listen to the `input` event for real-time feedback
+- Using `window.scrollY` to show/hide an element based on scroll position
+- How tab switchers work — removing `active` from all, then adding it to the clicked one
+
 
 # Day 15 — Component Library Preview Page
 
