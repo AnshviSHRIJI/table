@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenRoot NGO — Get Involved</title>
+  <meta name="description" content="Volunteer, donate, or join an upcoming GreenRoot NGO event in Maple Grove.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="site-nav">
+      <a href="index.html" class="logo">GreenRoot</a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-links">
+        <span class="sr-only">Menu</span>
+        <span class="nav-toggle-icon" aria-hidden="true"></span>
+      </button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="get-involved.html" aria-current="page">Get Involved</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section class="page-intro">
+      <h1>Get Involved</h1>
+      <p>We're a small NGO — that means every volunteer hour and every dollar is one we can actually feel. Here's how to pitch in.</p>
+    </section>
+
+    <section class="section volunteer">
+      <h2>Volunteer</h2>
+      <ul class="opportunity-list">
+        <li>
+          <strong>Park clean-up &amp; planting days</strong> — one Saturday morning a month, about 2 hours. No experience needed.
+        </li>
+        <li>
+          <strong>Compost drop-off support</strong> — Tuesday evenings, about 1 hour a week. Good for a regular standing commitment.
+        </li>
+        <li>
+          <strong>Youth workshop helpers</strong> — weekly during the school term, helping run sessions for ages 8–14.
+        </li>
+      </ul>
+    </section>
+
+    <section class="section donate">
+      <h2>Donate</h2>
+      <p>Donations go directly toward seedlings and tools for planting days, compost bins for the drop-off points, and materials for the youth workshops — nothing goes to overhead we don't have.</p>
+      <p>We don't take payments through this site yet. Email us at <a href="mailto:hello@greenroot.org">hello@greenroot.org</a> and we'll set up your gift directly.</p>
+    </section>
+
+    <section class="section events">
+      <h2>Upcoming Events</h2>
+      <ul class="event-list">
+        <li>
+          <span class="event-date">Sat, Jul 11</span>
+          <span class="event-name">Riverside Park Planting Day</span>
+        </li>
+        <li>
+          <span class="event-date">Sat, Jul 25</span>
+          <span class="event-name">Compost Bin Build Workshop</span>
+        </li>
+        <li>
+          <span class="event-date">Wed, Aug 5</span>
+          <span class="event-name">Youth Eco Workshop: Backyard Birds</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section signup">
+      <h2>Join Us</h2>
+      <form id="signup-form" novalidate>
+
+        <div class="form-row">
+          <label for="signup-name">Name</label>
+          <input type="text" id="signup-name" name="name" required aria-required="true">
+        </div>
+
+        <div class="form-row">
+          <label for="signup-email">Email</label>
+          <input type="email" id="signup-email" name="email" required aria-required="true">
+        </div>
+
+        <fieldset class="checkbox-group">
+          <legend>How would you like to help?</legend>
+          <p class="form-error" id="signup-error" role="alert" hidden>Please choose at least one option.</p>
+          <label><input type="checkbox" name="interest" value="volunteer"> Volunteering</label>
+          <label><input type="checkbox" name="interest" value="donate"> Donating</label>
+          <label><input type="checkbox" name="interest" value="events"> Attending events</label>
+          <label><input type="checkbox" name="interest" value="share"> Spreading the word</label>
+        </fieldset>
+
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+
+        <p class="form-success" id="signup-success" role="status">Thanks for signing up — we'll be in touch soon.</p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>GreenRoot NGO &middot; <a href="mailto:hello@greenroot.org">hello@greenroot.org</a> &middot; (555) 014-2231</p>
+      <ul class="social-links">
+        <li><a href="https://instagram.com">Instagram</a></li>
+        <li><a href="https://facebook.com">Facebook</a></li>
+      </ul>
+      <p class="copyright">&copy; 2026 GreenRoot NGO. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" aria-label="Back to top">&uarr;</button>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

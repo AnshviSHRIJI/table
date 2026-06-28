@@ -1,0 +1,481 @@
+/* design tokens
+   colours use CSS named colours instead of hex so the palette
+   reads clearly straight from this block */
+:root {
+  --color-primary: seagreen;
+  --color-secondary: peru;
+  --color-bg: linen;
+  --color-text: black;
+  --color-accent-light: wheat;
+  --color-success: mediumseagreen;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+
+  --radius: 8px;
+  --transition: 0.2s ease;
+}
+
+/* base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.25;
+  margin-top: 0;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+img, .photo-placeholder {
+  max-width: 100%;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background-color: var(--color-text);
+  color: white;
+  padding: var(--space-xs) var(--space-sm);
+  z-index: 10;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+/* keyboard focus should always be visible, not just on mouse hover */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+/* header and nav */
+.site-header {
+  background-color: var(--color-primary);
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-sm) var(--space-md);
+}
+
+.logo {
+  color: white;
+  font-family: Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 2px solid white;
+  border-radius: var(--radius);
+  padding: var(--space-xs);
+  cursor: pointer;
+}
+
+.nav-toggle-icon {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: white;
+  position: relative;
+}
+
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 2px;
+  background-color: white;
+}
+
+.nav-toggle-icon::before { top: -6px; }
+.nav-toggle-icon::after { top: 6px; }
+
+.nav-links {
+  display: flex;
+  gap: var(--space-md);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a[aria-current="page"] {
+  text-decoration: underline;
+}
+
+/* buttons */
+.btn {
+  display: inline-block;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color var(--transition);
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: darkgreen;
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: chocolate;
+}
+
+/* layout helpers */
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md);
+}
+
+.page-intro {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md) var(--space-md);
+}
+
+/* hero */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-lg);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md);
+}
+
+.hero-inner {
+  flex: 1 1 320px;
+}
+
+.hero-tagline {
+  font-size: 1.1rem;
+}
+
+/* photo placeholders stand in for real photography until the
+   client supplies it - simple gradients keep them from looking
+   like broken images */
+.photo-placeholder {
+  border-radius: var(--radius);
+  min-height: 220px;
+  flex: 1 1 280px;
+}
+
+.photo-hero {
+  background-image: linear-gradient(135deg, seagreen, darkseagreen);
+}
+
+.photo-trees {
+  background-image: linear-gradient(135deg, forestgreen, olivedrab);
+}
+
+.photo-compost {
+  background-image: linear-gradient(135deg, peru, sienna);
+}
+
+.photo-youth {
+  background-image: linear-gradient(135deg, mediumseagreen, wheat);
+}
+
+.photo-frame {
+  margin: 0;
+}
+
+.photo-frame figcaption {
+  font-size: 0.9rem;
+  color: dimgray;
+  margin-top: var(--space-xs);
+}
+
+/* card grid for the homepage program previews */
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.card {
+  flex: 1 1 280px;
+  background-color: var(--color-accent-light);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+}
+
+/* stat counters */
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+}
+
+.stat {
+  flex: 1 1 160px;
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.stat-label {
+  display: block;
+  color: dimgray;
+}
+
+/* cta banner */
+.cta-banner {
+  background-color: var(--color-accent-light);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+/* program pages */
+.program-body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.program-body .photo-frame {
+  flex: 1 1 280px;
+}
+
+.program-text {
+  flex: 1 1 320px;
+}
+
+/* lists used for volunteer opportunities and events */
+.opportunity-list,
+.event-list {
+  list-style: none;
+  padding: 0;
+}
+
+.opportunity-list li,
+.event-list li {
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid lightgray;
+}
+
+.event-date {
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-right: var(--space-sm);
+}
+
+/* forms */
+.form-row {
+  margin-bottom: var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  max-width: 420px;
+}
+
+.form-row label {
+  margin-bottom: var(--space-xs);
+  font-weight: bold;
+}
+
+.form-row input,
+.form-row textarea {
+  padding: var(--space-xs);
+  border: 1px solid darkgray;
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+
+.checkbox-group {
+  border: 1px solid darkgray;
+  border-radius: var(--radius);
+  padding: var(--space-sm);
+  margin-bottom: var(--space-sm);
+  max-width: 420px;
+}
+
+.checkbox-group legend {
+  font-weight: bold;
+  padding: 0 var(--space-xs);
+}
+
+.checkbox-group label {
+  display: block;
+  margin-bottom: var(--space-xs);
+}
+
+.form-error {
+  color: firebrick;
+  font-weight: bold;
+}
+
+/* success message is hidden by default and only gets a class
+   toggled by JS - the styling and transition stay in CSS */
+.form-success {
+  display: none;
+  background-color: var(--color-success);
+  color: white;
+  padding: var(--space-sm);
+  border-radius: var(--radius);
+  margin-top: var(--space-sm);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.form-success.is-visible {
+  display: block;
+  opacity: 1;
+}
+
+/* FAQ accordion - native details/summary gives keyboard support
+   and an open/closed state without any JavaScript */
+.faq details {
+  border-bottom: 1px solid lightgray;
+  padding: var(--space-sm) 0;
+}
+
+.faq summary {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* footer */
+.site-footer {
+  background-color: var(--color-primary);
+  color: white;
+  margin-top: var(--space-xl);
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
+  text-align: center;
+}
+
+.footer-inner a {
+  color: white;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: 0;
+}
+
+.copyright {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+/* back to top button, shown once the page has scrolled a bit */
+.back-to-top {
+  position: fixed;
+  right: var(--space-md);
+  bottom: var(--space-md);
+  background-color: var(--color-secondary);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition);
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* mobile nav: hide the link list behind the toggle button below
+   the same breakpoint named in the project brief */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: var(--space-sm);
+    padding: var(--space-sm) 0 0;
+  }
+
+  .nav-links.is-open {
+    display: flex;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .form-success,
+  .back-to-top {
+    transition: none;
+  }
+}
