@@ -65,3 +65,41 @@ A single-page component library built for a design agency, showcasing six reusab
 - How to build a token-driven design system using CSS custom properties
 - Keeping JavaScript minimal — only toggling classes while CSS handles animations
 - Writing accessible markup with proper ARIA attributes and focus styles
+
+
+#  Day 16 - GreenRoot NGO Website plane 
+
+## Overview
+
+GreenRoot is a responsive multi-page NGO website that promotes environmental sustainability and community involvement. It provides information about the organization's mission, programs, volunteering, donations, and contact details.
+
+## Pages
+
+* **Home (`index.html`)** – Introduction, mission, impact, and call-to-action.
+* **Programs (`programs.html`)** – Details of the NGO's three main programs.
+* **Get Involved (`get-involved.html`)** – Volunteer opportunities, donations, events, and sign-up form.
+* **Contact (`contact.html`)** – Contact form, address, phone, email, and social links.
+
+## Technologies Used
+
+* HTML5
+* CSS3
+* JavaScript
+* Flexbox & CSS Grid
+* Responsive Web Design
+
+## Features
+
+* Responsive layout
+* Reusable components
+* CSS-only mobile navigation
+* Form validation
+* Clean, nature-inspired design
+
+## Future Development
+
+* Online donation integration
+* Event management system
+* Blog or news section
+* Interactive impact statistics
+
